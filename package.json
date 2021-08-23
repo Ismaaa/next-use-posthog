@@ -4,7 +4,8 @@
   "license": "MIT",
   "description": "A Next.js hook for PostHog analytics",
   "author": {
-    "name": "Ismaaa"
+    "name": "Ismaaa",
+    "email": "didouhismael@gmail.com"
   },
   "repository": {
     "type": "git",
