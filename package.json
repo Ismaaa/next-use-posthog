@@ -2,7 +2,7 @@
   "name": "next-use-posthog",
   "version": "0.1.0",
   "license": "MIT",
-  "description": "A React hook for PostHog analytics",
+  "description": "A Next.js hook for PostHog analytics",
   "author": {
     "name": "Ismaaa"
   },
