@@ -8,6 +8,8 @@ This is just a convenience wrapper around [posthog-js](https://github.com/PostHo
 
 ## Usage
 
+In `pages/_app.js` or `pages/_app.tsx`
+
 ### JavaScript
 
 ```typescript
