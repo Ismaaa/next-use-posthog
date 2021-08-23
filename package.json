@@ -1,0 +1,48 @@
+{
+  "name": "next-use-posthog",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "A React hook for PostHog analytics",
+  "author": {
+    "name": "Ismaaa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ismaaa/next-use-posthog"
+  },
+  "homepage": "https://github.com/Ismaaa/next-use-posthog",
+  "bugs": {
+    "url": "https://github.com/Ismaaa/next-use-posthog/issues"
+  },
+  "keywords": [
+    "posthog",
+    "next.js",
+    "react",
+    "analytics",
+    "react",
+    "hook"
+  ],
+  "files": [
+    "dist",
+    "license",
+    "README.md"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "ts-standard",
+    "lint:fix": "ts-standard --fix"
+  },
+  "dependencies": {
+    "posthog-js": "^1.12.6"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1 || ^17"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "typescript": "^4.2.4",
+    "ts-standard": "^10.0.0",
+    "next": "*"
+  }
+}
