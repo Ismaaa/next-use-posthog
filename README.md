@@ -44,6 +44,27 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 export default App
 ```
 
+### Disable in development
+
+```typescript
+import { usePostHog } from 'next-use-posthog'
+import { AppProps } from 'next/app'
+import { FC } from 'react'
+
+const App: FC<AppProps> = ({ Component, pageProps }) => {
+  usePostHog('API_KEY', {
+    api_host: 'https://app.posthog.com',
+    loaded: (posthog) => {
+      if (process.env.NODE_ENV === 'development') posthog.opt_out_capturing();
+    },
+  });
+
+  return <Component {...pageProps} />
+}
+
+export default App
+```
+
 ## Dependencies
 
 - React
