@@ -1,6 +1,6 @@
 {
   "name": "next-use-posthog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "A Next.js hook for PostHog analytics",
   "author": {
