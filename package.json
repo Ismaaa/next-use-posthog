@@ -1,6 +1,6 @@
 {
   "name": "next-use-posthog",
-  "version": "0.1.5",
+  "version": "1.16.0",
   "license": "MIT",
   "description": "A Next.js hook for PostHog analytics",
   "author": {
@@ -34,7 +34,7 @@
     "prepublish": "tsc"
   },
   "dependencies": {
-    "posthog-js": "^1.12.6"
+    "posthog-js": "1.16.0"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17"
