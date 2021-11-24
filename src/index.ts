@@ -6,15 +6,25 @@ export const usePostHog = (apiKey: string, config?: posthog.Config, name?: strin
   const router = useRouter()
 
   useEffect((): () => void => {
+    const capturePageView = () => posthog.capture('$pageview')
     // Init PostHog
-    posthog.init(apiKey, config, name)
+    posthog.init(
+      apiKey,
+      // disable posthog's default pageview capturing since we already capture on every load
+      { capture_pageview: false, ...config },
+      name
+    )
 
-    // Track page views
-    const handleRouteChange = () => posthog.capture('$pageview')
-    router.events.on('routeChangeComplete', handleRouteChange)
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
+    // onRouteChangeComplete triggers twice on page loads with query parameters
+    // https://github.com/vercel/next.js/issues/11639
+    // https://github.com/vercel/next.js/pull/17710/files
+    if (!router.asPath.includes('?')) {
+      capturePageView()
     }
-  }, [])
+
+    router.events.on('routeChangeComplete', capturePageView)
+    return () => {
+      router.events.off('routeChangeComplete', capturePageView)
+    }
+  }, [router.events])
 }
