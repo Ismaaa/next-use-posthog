@@ -37,7 +37,7 @@
     "posthog-js": "1.16.0"
   },
   "peerDependencies": {
-    "react": "^16.13.1 || ^17"
+    "react": "^16.13.1 || ^17 || ^18"
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
