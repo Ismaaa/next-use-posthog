@@ -34,7 +34,7 @@
     "prepublish": "tsc"
   },
   "dependencies": {
-    "posthog-js": "1.16.0"
+    "posthog-js": "^1.38.0"
   },
   "peerDependencies": {
     "react": "^16.13.1 || ^17 || ^18"
