@@ -1,3 +1,6 @@
+# :warning: This package is now maintained by the PostHog core team. :warning:
+Repo [here](https://github.com/PostHog/posthog-nextjs).
+
 # next-use-posthog
 
 This is just a convenience wrapper around [posthog-js](https://github.com/PostHog/posthog-js) for [Next.js](https://nextjs.org)
